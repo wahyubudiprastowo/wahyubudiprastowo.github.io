@@ -173,13 +173,14 @@
     {
       "id": "brightoria3d",
       "title": "Brightoria 3D",
-      "small": "3D game-based learning",
-      "hook": "Yes, I make games too — a 3D learning world where kids aged 6–12 level up through self-paced tracks and 1-on-1 tutoring.",
-      "url": "https://github.com/wahyubudiprastowo/brightoria3D",
+      "small": "3D learning world · six interactive islands",
+      "hook": "Explore a playful 3D world where Qur'an, adab, maths, Arabic, English and digital safety become missions, games and daily learning journeys.",
+      "url": "https://brightoria.brightacademy.sch.id/",
       "cat": "apps",
       "tag": "Game making",
       "lang": "TypeScript",
-      "img": ""
+      "img": "",
+      "video": "brightoria-motion.mp4"
     },
     {
       "id": "quran-learning-adventure",

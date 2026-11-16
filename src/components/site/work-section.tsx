@@ -8,11 +8,11 @@ import { LazyImg } from "./lazy-img";
 import { cn } from "@/lib/utils";
 import type { ProjectItem } from "@/lib/site-content";
 
-/** GitHub repo link -> its live OpenGraph preview card (1200x600). */
+/** Use an explicit image when supplied; otherwise render our local poster. */
 function ogFor(p: ProjectItem): string {
-  if (p.img) return p.img;
-  const m = p.url.match(/^https?:\/\/github\.com\/([^/]+)\/([^/#?]+)/);
-  return m ? `https://opengraph.githubassets.com/1/${m[1]}/${m[2]}` : "";
+  // Remote GitHub cards are inconsistent (often white, cropped, or rate-limited).
+  // Empty img values intentionally use our local POPOLAB-style poster fallback.
+  return p.img;
 }
 
 function ProjectThumb({ p, no }: { p: ProjectItem; no: string }) {

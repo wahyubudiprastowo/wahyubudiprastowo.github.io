@@ -84,7 +84,7 @@ export function ContactSection() {
           >
             <div className="tc-top">
               <span className="label">
-                <b>GTA VI</b> / me &amp; Ria
+                <b>GTA VI</b> / me
               </span>
               <span className="label">
                 <b>Open to work</b>

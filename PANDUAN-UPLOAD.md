@@ -18,7 +18,7 @@ sumbernya) — semuanya otomatis dan bisa dimatikan:
 | --- | --- |
 | **Swarm cursors (kursor berlarian)** | 10 kursor **skill** bernama (Azure, AWS, Google Cloud, Terraform, Kubernetes, Python, PowerShell, Ansible, Docker, Wazuh) terbang masuk saat halaman dibuka, lalu: saat mouse bergerak mereka mengorbit mouse anda seperti kolaborator di Figma; saat mouse diam mereka "bekerja" sendiri — membaca teks (menyapu highlight warna), mengklik tombol (kotak seleksi + ripple, hanya visual), dan membingkai gambar/judul dengan kotak berukuran W × H ala aplikasi desain. Versi seluler mendapat 4 kursor. **Kartu projek kini memakai poster seni lokal bergaya POPOLAB** (judul raksasa Anton, angka ghost, glow merah bergantian) — bukan lagi tangkapan OpenGraph GitHub. |
 | **Mega name ala POPOLAB** | Tulisan raksasa WAHYU gradien merah di belakang hero, terpotong rapi di tepi layar, bergeser parallax saat scroll. |
-| **Foto GTA VI ala header POPOLAB** | Hero memakai **cutout transparan** gaya *GTA VI* (`public/gta-cut.webp`) — Wahyu & Ria tampak "muncul" dari tulisan raksasa seperti maskot POPOLAB, mengapung lembut (mascot float), dengan glow merah + drop shadow. Di bagian kontak ada kartu miring 3D (tilt-card) berisi potret penuh + tulisan "PLAYER 1 READY.". Ganti filenya (nama sama) untuk ganti foto. |
+| **Foto GTA VI ala header POPOLAB** | Hero memakai **cutout transparan** gaya *GTA VI* (`public/gta-cut.webp`) — Wahyu tampak "muncul" dari tulisan raksasa seperti maskot POPOLAB, mengapung lembut (mascot float), dengan glow merah + drop shadow. Di bagian kontak ada kartu miring 3D (tilt-card) berisi potret Wahyu + tulisan "PLAYER 1 READY.". Ganti filenya (nama sama) untuk ganti foto. |
 | **Custom cursor** | Titik merah + ring yang mengikuti mouse; membesar di link; berubah jadi bulatan merah "OPEN" di atas kartu projek. Nonaktif di perangkat sentuh. |
 | **Marquee ticker** | Pita merah miring raksasa (Cloud Security ✦ Automation ✦ Azure ✦ …) setelah hero + pita outline sebelum Journey. Berhenti saat di-hover. |
 | **Typewriter** | Nama di hero diketik ulang setiap halaman dibuka, caret merah berkedip. |
@@ -148,9 +148,9 @@ Struktur singkat:
    `linkedin.com/in/wahyubudiprastowo` (tebakan dari nama). Kalau vanity URL
    Anda berbeda, klik teksnya di Mode Edit atau ubah `contact.items.3.href`
    dan `contact.ctaHref` di `public/content.json`.
-2. **Foto hero & kontak** — sekarang pakai ilustrasi GTA VI (`gta-cut.webp`
-   di hero, `gta-portrait.webp` di kontak). Ingin ganti gaya/foto? Timpa file
-   di folder `public/` dengan nama sama.
+2. **Foto hero & kontak** — sekarang keduanya memakai cutout Wahyu
+   (`gta-cut.webp`). Ingin ganti gaya/foto? Timpa file di folder `public/`
+   dengan nama sama.
 3. **Deskripsi repo** yang belum punya deskripsi di GitHub sudah saya tulis
    perkiraan dari namanya — silakan koreksi lewat Mode Edit (gerigi kartu).
 4. **Certs** — kartu sertifikasi menunjuk ke repo `WhoAmI`. Ganti `href`-nya ke
