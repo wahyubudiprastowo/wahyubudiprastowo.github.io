@@ -25,6 +25,7 @@ export interface ProjectItem {
   tag: string;
   lang: string;
   img: string;
+  video?: string;
 }
 
 export interface WorkTab {
@@ -258,6 +259,7 @@ export const DEFAULT_CONTENT: SiteContent = {
       tag: "Flagship",
       lang: "Python",
       img: "",
+      video: "agentic-ai-soc.mp4",
     },
     {
       id: "wazuhaiunified",
@@ -291,6 +293,7 @@ export const DEFAULT_CONTENT: SiteContent = {
       tag: "Data safety",
       lang: "Python",
       img: "",
+      video: "microsoft365-backup.mp4",
     },
     {
       id: "popo-portfolio",
@@ -483,9 +486,9 @@ export const DEFAULT_CONTENT: SiteContent = {
       },
       {
         when: "2007 — 2011",
-        what: "B.Sc. Information Systems",
-        whatSub: "Budi Luhur University, Jakarta",
-        body: "Where it all started — networks, servers and a taste for breaking things until they make sense.",
+        what: "Professional In-Progress Researcher",
+        whatSub: "Information Systems · Budi Luhur University, Jakarta",
+        body: "The original research lab: networks, servers and enough curiosity to turn unfinished coursework into a career of breaking, fixing and automating systems.",
       },
     ],
     winsTitle: "Certs &\ntraining.",
@@ -555,11 +558,11 @@ export const DEFAULT_CONTENT: SiteContent = {
         href: "https://www.linkedin.com/in/wahyubudiprastowo",
       },
     ],
-    tiltTopLeft: "GTA VI edition / me & Ria",
+    tiltTopLeft: "GTA VI edition / me",
     tiltTopRight: "Status / open to work",
     tiltTitle: "Player 1\nready.",
-    tiltImg: "gta-portrait.webp",
-    tiltImgAlt: "GTA VI style illustration of Wahyu and Ria",
+    tiltImg: "gta-cut.webp",
+    tiltImgAlt: "GTA VI style cutout portrait of Wahyu",
     keepTitle: "Keep it\nopen.",
     keepBody:
       "Every project above is open source and free to learn from. If something helps you, give it a star, fork it or open an issue — contributions are always welcome.",

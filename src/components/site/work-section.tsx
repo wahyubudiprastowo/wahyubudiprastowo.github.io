@@ -16,6 +16,20 @@ function ogFor(p: ProjectItem): string {
 }
 
 function ProjectThumb({ p, no }: { p: ProjectItem; no: string }) {
+  if (p.video) {
+    return (
+      <video
+        className="thumb-video"
+        src={p.video}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-label={`Motion preview of project ${p.title}`}
+      />
+    );
+  }
   const og = ogFor(p);
   const fb = (
     <div className="thumb-fb" aria-hidden="true">
