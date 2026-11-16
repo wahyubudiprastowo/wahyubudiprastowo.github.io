@@ -22,15 +22,15 @@ import { useSite } from "./site-context";
 /* Skill cursors: 10 tools from the CV, near-brand colors (no logos).
    "Wazuh" carries the site red so the squad always has one red cursor. */
 const ROSTER = [
-  { n: "Azure", c: "#0078d4" },
-  { n: "AWS", c: "#ff9900" },
-  { n: "Google Cloud", c: "#ea4335" },
   { n: "Terraform", c: "#7b42bc" },
   { n: "Kubernetes", c: "#326ce5" },
+  { n: "Docker", c: "#2496ed" },
+  { n: "Ansible", c: "#ee0000" },
+  { n: "Azure", c: "#0078d4" },
+  { n: "Microsoft 365", c: "#d83b01" },
   { n: "Python", c: "#ffd343", dark: true },
   { n: "PowerShell", c: "#5391fe" },
-  { n: "Ansible", c: "#ee0000" },
-  { n: "Docker", c: "#2496ed" },
+  { n: "GitHub Actions", c: "#2088ff" },
   { n: "Wazuh", c: "#ff1e2d" },
 ];
 

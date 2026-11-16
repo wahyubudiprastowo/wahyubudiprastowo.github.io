@@ -4,27 +4,38 @@ import { useMemo, useState } from "react";
 import { useSite } from "./site-context";
 import { Ed } from "./ed";
 import { Rv } from "./rv";
+import { LazyImg } from "./lazy-img";
 import { cn } from "@/lib/utils";
 import type { ProjectItem } from "@/lib/site-content";
 
-function ProjectThumb({ p }: { p: ProjectItem }) {
-  const [err, setErr] = useState(false);
-  if (!p.img || err) {
-    return (
-      <div className="thumb-fb" aria-hidden="true">
-        <span className="font-display">{p.title}</span>
-        <span className="thumb-fb-sub">{p.lang}</span>
-      </div>
-    );
-  }
+/** GitHub repo link -> its live OpenGraph preview card (1200x600). */
+function ogFor(p: ProjectItem): string {
+  if (p.img) return p.img;
+  const m = p.url.match(/^https?:\/\/github\.com\/([^/]+)\/([^/#?]+)/);
+  return m ? `https://opengraph.githubassets.com/1/${m[1]}/${m[2]}` : "";
+}
+
+function ProjectThumb({ p, no }: { p: ProjectItem; no: string }) {
+  const og = ogFor(p);
+  const fb = (
+    <div className="thumb-fb" aria-hidden="true">
+      <span className="fb-ghost font-display">{no}</span>
+      <span className="fb-title font-display">{p.title}</span>
+      <span className="fb-foot">
+        <i>GITHUB / WAHYUBUDIPRASTOWO</i>
+        <b>{p.lang}</b>
+      </span>
+    </div>
+  );
+  if (!og) return fb;
   return (
-    <img
-      src={p.img}
+    <LazyImg
+      src={og}
       alt={`Preview of project ${p.title}`}
       width={1200}
       height={600}
-      loading="lazy"
-      onError={() => setErr(true)}
+      className="thumb-lazy"
+      fallback={fb}
     />
   );
 }
@@ -151,7 +162,7 @@ export function WorkSection() {
             <>
               <div className="thumb">
                 <span className="tag">{p.tag}</span>
-                <ProjectThumb p={p} />
+                <ProjectThumb p={p} no={no} />
               </div>
               <div className="meta">
                 <span className="no">{no}</span>

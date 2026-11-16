@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useSite } from "./site-context";
 import { Ed } from "./ed";
 import { Ast } from "./ico";
+import { LazyImg } from "./lazy-img";
 import { cn } from "@/lib/utils";
 
 /** Statistic number with a count-up animation once visible (supports decimals). */
@@ -53,7 +54,6 @@ function CountNum({ target }: { target: string }) {
 
 export function Hero() {
   const { content, editing, motion, mounted } = useSite();
-  const [photoErr, setPhotoErr] = useState(false);
   const full = content.hero.name;
   const animate = mounted && motion && !editing;
   const [typed, setTyped] = useState(full);
@@ -111,7 +111,7 @@ export function Hero() {
           <Ed p="hero.hello" />
         </span>
         <h1 className="hero-name intro d2" id="hero-name">
-          <span className="typed">{typed}</span>
+          <span className={cn("typed", !isTyping && "done")}>{typed}</span>
           {!isTyping ? (
             <Ed p="hero.dot" className="r" ariaLabel="dot" />
           ) : null}
@@ -142,21 +142,19 @@ export function Hero() {
 
       {/* POPOLAB-style visual: the GTA artwork rises out of the giant word. */}
       <div className="hero-visual intro d3">
-        {photoErr ? (
-          <div className="photo-fb font-display" role="img" aria-label={c.hero.photoAlt}>
-            WB
-          </div>
-        ) : (
-          <img
-            src={c.hero.photoUrl}
-            alt={c.hero.photoAlt}
-            width={730}
-            height={809}
-            loading="eager"
-            fetchPriority="high"
-            onError={() => setPhotoErr(true)}
-          />
-        )}
+        <LazyImg
+          src={c.hero.photoUrl}
+          alt={c.hero.photoAlt}
+          width={940}
+          height={1528}
+          eager
+          className="hero-cut"
+          fallback={
+            <div className="photo-fb font-display" role="img" aria-label={c.hero.photoAlt}>
+              WB
+            </div>
+          }
+        />
         <span className="vis-note font-hand" aria-hidden={!editing}>
           <Ed p="hero.photoCaption" />
         </span>

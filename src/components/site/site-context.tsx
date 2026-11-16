@@ -108,9 +108,19 @@ export function SiteProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   // Keep the browser tab title in sync with the editable meta.title.
+  // Re-asserted shortly after every change because the Next.js runtime
+  // re-applies the static SSR metadata asynchronously after commits.
   useEffect(() => {
-    if (content.meta?.title) document.title = content.meta.title;
-  }, [content.meta?.title]);
+    if (!mounted) return;
+    const t = content.meta?.title;
+    if (!t) return;
+    const apply = () => {
+      document.title = t;
+    };
+    apply();
+    const id = setTimeout(apply, 150);
+    return () => clearTimeout(id);
+  }, [mounted, content.meta?.title]);
 
   // Autosave ke localStorage setiap konten berubah
   useEffect(() => {

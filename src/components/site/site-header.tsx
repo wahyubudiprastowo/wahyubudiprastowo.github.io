@@ -149,9 +149,7 @@ export function SiteHeader() {
 
           <a
             className="hd-cta"
-            href="https://github.com/wahyubudiprastowo"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             onClick={(e) => editing && e.preventDefault()}
           >
             <span className="tx">Hire me</span> <span aria-hidden="true">&#8599;</span>

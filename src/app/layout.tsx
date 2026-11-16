@@ -30,15 +30,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wahyu Budi Prastowo — Cloud Infrastructure Architect",
+  title: "Wahyu Budi Prastowo — Cloud Infrastructure Architect & AI Tinkerer",
   description:
-    "14+ years designing, migrating and securing enterprise infrastructure across Azure, AWS, GCP and hybrid clouds — now putting AI to work on security, games, social media tooling and automation.",
-  keywords: ["Wahyu Budi Prastowo", "Cloud Infrastructure Architect", "Azure", "Cloud Security", "DevSecOps", "Agentic AI", "portfolio"],
+    "14+ years across Azure, AWS, GCP and hybrid cloud — DevOps, security, Microsoft 365 and automation by day; agentic AI, vibe coding and game projects by night. Everything open source.",
+  keywords: ["Wahyu Budi Prastowo", "Cloud Infrastructure Architect", "Azure", "DevOps", "Microsoft 365", "Cloud Security", "Agentic AI", "Automation", "Vibe Coding", "portfolio"],
   authors: [{ name: "Wahyu Budi Prastowo", url: "https://github.com/wahyubudiprastowo" }],
   openGraph: {
-    title: "Wahyu Budi Prastowo — Cloud Infrastructure Architect",
+    title: "Wahyu Budi Prastowo — Cloud Infrastructure Architect & AI Tinkerer",
     description:
-      "Cloud, security and automation — 14+ years in enterprise infrastructure, now having fun with everything AI.",
+      "DevOps, security, Microsoft 365 and automation by day; agentic AI, vibe coding and game projects by night — 14+ years in enterprise infrastructure.",
     siteName: "Wahyu Budi Prastowo",
     type: "website",
   },

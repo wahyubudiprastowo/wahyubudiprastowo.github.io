@@ -9,27 +9,25 @@ browser, tanpa install apapun.
 
 ---
 
-## Fitur motion & efek dinamis (v3)
+## Fitur motion & efek dinamis (v4 — POPOLAB layout)
 
-Situs kini punya efek lengkap bergaya POPOLAB — semuanya otomatis dan bisa dimatikan:
+Situs kini mengikuti layout & efek situs POPOLAB persis (direplikasi dari kode
+sumbernya) — semuanya otomatis dan bisa dimatikan:
 
 | Efek | Detail |
 | --- | --- |
-| **Swarm cursors (kursor berlarian)** | 10 kursor AI bernama (Claude Opus, Claude Fable, Wahyu, ChatGPT, Gemini, Grok, DeepSeek, Copilot, Perplexity, Llama) terbang masuk saat halaman dibuka, lalu: saat mouse bergerak mereka mengorbit mouse anda seperti kolaborator di Figma; saat mouse diam mereka "bekerja" sendiri — membaca teks (menyapu highlight warna), mengklik tombol (kotak seleksi + ripple, hanya visual, tidak benar-benar menekan), dan membingkai gambar/judul dengan kotak berukuran W × H ala aplikasi desain. Versi seluler mendapat 4 kursor. |
+| **Swarm cursors (kursor berlarian)** | 10 kursor **skill** bernama (Azure, AWS, Google Cloud, Terraform, Kubernetes, Python, PowerShell, Ansible, Docker, Wazuh) terbang masuk saat halaman dibuka, lalu: saat mouse bergerak mereka mengorbit mouse anda seperti kolaborator di Figma; saat mouse diam mereka "bekerja" sendiri — membaca teks (menyapu highlight warna), mengklik tombol (kotak seleksi + ripple, hanya visual), dan membingkai gambar/judul dengan kotak berukuran W × H ala aplikasi desain. Versi seluler mendapat 4 kursor. **Kartu projek kini memakai poster seni lokal bergaya POPOLAB** (judul raksasa Anton, angka ghost, glow merah bergantian) — bukan lagi tangkapan OpenGraph GitHub. |
+| **Mega name ala POPOLAB** | Tulisan raksasa WAHYU gradien merah di belakang hero, terpotong rapi di tepi layar, bergeser parallax saat scroll. |
+| **Foto GTA VI ala header POPOLAB** | Hero memakai **cutout transparan** gaya *GTA VI* (`public/gta-cut.webp`) — Wahyu & Ria tampak "muncul" dari tulisan raksasa seperti maskot POPOLAB, mengapung lembut (mascot float), dengan glow merah + drop shadow. Di bagian kontak ada kartu miring 3D (tilt-card) berisi potret penuh + tulisan "PLAYER 1 READY.". Ganti filenya (nama sama) untuk ganti foto. |
 | **Custom cursor** | Titik merah + ring yang mengikuti mouse; membesar di link; berubah jadi bulatan merah "OPEN" di atas kartu projek. Nonaktif di perangkat sentuh. |
-| **Marquee ticker** | Pita merah miring raksasa (Cloud Security ✦ DevSecOps ✦ Azure ✦ …) setelah hero + pita outline sebelum kontak. Berhenti saat di-hover; tepi memudar halus. |
-| **Foto GTA VI** | Foto hero kini ilustrasi bergaya *GTA loading screen* (`public/gta-portrait.webp`) plus stiker kecil "Main characters" (crop wajah, `public/gta-faces.webp`) yang menumpuk di pojok polaroid. Ganti filenya (nama sama) untuk ganti foto. Caption keduanya bisa diedit di Mode Edit (`hero.photoCaption`, `hero.stickerCaption`). |
-| **Heading sweep** | Judul besar (WORK THAT SHIPS. / LET'S BUILD SECURE THINGS.) menyapu masuk dari kiri dengan clip mask saat terlihat. |
-| **Floating tags** | Chip teknologi (Azure, Wazuh, Python…) mengambang di sekitar foto — bisa diedit langsung di Mode Edit. |
-| **Magnetic buttons** | Tombol CTA tertarik mengikuti kursor. |
-| **Parallax** | Teks raksasa WAHYU bergeser & memudar saat scroll. |
-| **3D tilt** | Kartu foto polaroid miring mengikuti mouse. |
-| **Spotlight kartu** | Cahaya merah mengikuti pointer di permukaan kartu projek. |
-| **Scramble nav** | Teks menu work/contact "berantakan" lalu normal saat hover. |
-| **Intro stagger** | Bagian hero muncul berurutan saat halaman dibuka. |
+| **Marquee ticker** | Pita merah miring raksasa (Cloud Security ✦ Automation ✦ Azure ✦ …) setelah hero + pita outline sebelum Journey. Berhenti saat di-hover. |
+| **Typewriter** | Nama di hero diketik ulang setiap halaman dibuka, caret merah berkedip. |
+| **Scroll-spy nav** | Titik merah di menu header pindah otomatis mengikuti section yang sedang dilihat (Work / Numbers / Craft / Journey / Contact). |
+| **Scramble nav** | Teks menu "berantakan" lalu normal saat hover. |
+| **Count-up + jam live** | Statistik (14+ / 2.9B / 99.99%) berhitung naik; jam Jakarta (WIB) berdetak di footer. |
+| **Intro stagger** | Bagian hero muncul berurutan; semua section fade-in saat discroll. |
+| **Magnetic + micro-interactions** | Tombol CKA tertarik mengikuti kursor; panah bergerak saat hover; gambar kartu projek zoom halus; timeline Journey buka-tutup. |
 | **Scroll progress** | Garis merah tipis di atas = sisa halaman. |
-| **Count-up + jam live** | Statistik berhitung naik; jam Jakarta (WIB) berdetak di footer. |
-| **Micro-interactions** | Panah "SCROLL DOWN" memantul, halo berdenyut di tombol play, underline merah meluncur di tab filter, ring putus-putus berputar di CTA lingkaran, dot logo berkedip, chip tools & baris kontak terangkat saat hover. |
 
 Semua efek mati bila tombol **Motion → Off** (tersimpan di browser) atau bila OS
 user mengaktifkan *reduced motion*.
@@ -41,7 +39,7 @@ user mengaktifkan *reduced motion*.
 | Bagian | Fungsi |
 | --- | --- |
 | `src/` | Kode tampilan website (tidak perlu diubah untuk ganti isi) |
-| `public/content.json` | **SELURUH ISI WEBSITE** — teks, projek, statistik, kontak, ticker, floating tags |
+| `public/content.json` | **SELURUH ISI WEBSITE** — teks, projek, statistik, angka, timeline, sertifikasi, kontak, ticker |
 | Edit Mode (tombol di website) | Ubah isi langsung di browser, tanpa koding |
 | `.github/workflows/deploy-pages.yml` | Otomatis membangun & menayangkan website setiap kali repo di-update |
 
@@ -102,10 +100,10 @@ Lalu lanjut ke langkah 6 di atas (Settings → Pages → Source: **GitHub Action
 
 1. Buka website Anda, klik tombol **Edit Mode** (di header kanan atas atau
    toolbar bawah).
-2. **Klik teks mana pun** untuk mengubahnya: nama, deskripsi, statistik, chip
-   teknologi yang mengambang, teks kontak, catatan footer, semuanya bisa
-   langsung diketik ulang. Efek mengambang otomatis berhenti saat mode edit
-   aktif supaya teks mudah diklik.
+2. **Klik teks mana pun** untuk mengubahnya: nama, deskripsi, statistik, chips,
+   baris angka, timeline karier, sertifikasi, teks kontak, catatan footer —
+   semuanya bisa langsung diketik ulang. Kursor swarm otomatis berhenti saat
+   mode edit aktif supaya teks mudah diklik.
 3. Untuk kartu projek: klik ikon **gerigi** di pojok kartu. Di situ Anda bisa
    mengubah judul, subjudul, hook, URL, bahasa, label, kategori, gambar, atau
    **menghapus** kartu.
@@ -131,9 +129,12 @@ Struktur singkat:
 
 ```json
 {
-  "hero": { "name": "Wahyu Budi Prastowo", "desc": "...", "floatTags": ["Azure", "Wazuh"] },
-  "ticker": { "words": ["Cloud Security", "DevSecOps", "Azure"] },
-  "stats": [ { "n": "10", "small": "+", "t": "Years in IT" } ],
+  "hero": { "name": "Wahyu Budi Prastowo", "desc": "..." },
+  "ticker": { "words": ["Cloud Security", "Automation", "Azure"] },
+  "stats": [ { "n": "14", "small": "+", "t": "Years in infrastructure & cloud" } ],
+  "numbers": { "rows": [ { "rt": "Monitoring cost cut", "rv": "50", "rvSmall": "%" } ] },
+  "craft": { "steps": [ { "b": "Automate the repeat", "s": "..." } ] },
+  "journey": { "items": [ { "when": "2023 — Now", "what": "Senior Cloud Infrastructure & Security Architect" } ] },
   "projects": [ { "title": "Agentic AI SOC", "url": "https://github.com/..." } ],
   "contact": { "items": [ ... ] }
 }
@@ -141,17 +142,19 @@ Struktur singkat:
 
 ---
 
-## BAGIAN 3 — Hal yang belum terisi (jangan lupa!)
+## BAGIAN 3 — Yang perlu Anda cek / koreksi
 
-Field berikut sengaja dikosongkan karena datanya tidak ada di GitHub profil
-Anda. Isi lewat Mode Edit lalu publikasikan:
-
-1. **Email** (kartu kontak ke-3) — masih `Fill in via Edit Mode`, isi juga
-   alamat `href`-nya di `content.json` (ganti `"#"` menjadi `mailto:nama@email.com`).
-2. **LinkedIn** (kartu kontak ke-4) — sama, isi URL profil LinkedIn Anda.
-3. Deskripsi repo yang belum punya deskripsi di GitHub (RTFM-DocumentLabs,
-   WazuhAIUnified, dsb) sudah saya tulis perkiraan dari namanya — silakan
-   koreksi agar 100% akurat.
+1. **LinkedIn** — URL profil memakai pola
+   `linkedin.com/in/wahyubudiprastowo` (tebakan dari nama). Kalau vanity URL
+   Anda berbeda, klik teksnya di Mode Edit atau ubah `contact.items.3.href`
+   dan `contact.ctaHref` di `public/content.json`.
+2. **Foto hero & kontak** — sekarang pakai ilustrasi GTA VI (`gta-cut.webp`
+   di hero, `gta-portrait.webp` di kontak). Ingin ganti gaya/foto? Timpa file
+   di folder `public/` dengan nama sama.
+3. **Deskripsi repo** yang belum punya deskripsi di GitHub sudah saya tulis
+   perkiraan dari namanya — silakan koreksi lewat Mode Edit (gerigi kartu).
+4. **Certs** — kartu sertifikasi menunjuk ke repo `WhoAmI`. Ganti `href`-nya ke
+   Credly bila ingin lebih resmi.
 
 ---
 

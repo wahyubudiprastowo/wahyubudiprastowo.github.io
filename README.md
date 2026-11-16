@@ -1,56 +1,40 @@
 # WAHYU — Personal Portfolio (POPOLAB-style)
 
-A single-page personal portfolio for **Wahyu Budi Prastowo** (IT Infrastructure · Cloud Security · Azure), inspired by the interaction design of [popolab-tw.github.io](https://popolab-tw.github.io/). Built with **Next.js 16 + TypeScript + Tailwind CSS 4**, deploys as a **static export to GitHub Pages**.
+A single-page personal portfolio for **Wahyu Budi Prastowo** (Cloud Infrastructure Architect — Migration · Security · Automation · AI), faithfully modeled on the layout and interaction design of [popolab-tw.github.io](https://popolab-tw.github.io/) (rebuilt from its public source). Built with **Next.js 16 + TypeScript + Tailwind CSS 4**, deploys as a **static export to GitHub Pages**.
 
-**Live site language:** English. Everything you see is content-driven and editable.
+**Live site language:** English. Content comes from the CV highlights and every text is editable in the browser.
 
 ## Signature effects
 
 | Effect | What it does |
 | --- | --- |
-| **Swarm cursors** | 10 named AI cursors (Claude Opus, Claude Fable, Wahyu, ChatGPT, Gemini, Grok, DeepSeek, Copilot, Perplexity, Llama) fly in on load, orbit the mouse like design-tool collaborators, and when it rests they "work": reading text lines with a colored highlight sweep, clicking buttons (visual selection box + ripple), and inspecting images/titles with live `W × H` measurement boxes. |
+| **Skill swarm cursors** | 10 named skill cursors (Azure, AWS, Google Cloud, Terraform, Kubernetes, Python, PowerShell, Ansible, Docker, Wazuh) fly in on load, orbit the mouse like design-tool collaborators, and when it rests they "work": reading text lines with a colored highlight sweep, clicking buttons (visual selection box + ripple), and inspecting images/titles with live `W × H` measurement boxes. Mobile gets 4 cursors. |
+| **POPOLAB hero** | Giant red-gradient "WAHYU" mega word bleeding edge-to-edge, handwritten "Hello, I'm", typewriter name, red uppercase role, count-up stats, and the GTA VI artwork crop rising out of the mega word with a red glow and bottom fade. |
 | **Custom cursor** | Red dot + eased trailing ring; grows on links, becomes an "OPEN" bubble over project cards. |
-| **GTA VI portrait** | Hero polaroid uses a GTA-style illustration with a small overlapping "Main characters" sticker. |
-| **Marquee tickers** | Giant tilted red band + ghost outline band, infinite scroll, soft edge fade. |
-| **Heading sweep** | Big section headings slide in behind a clip mask. |
-| **Micro-motion** | Scramble nav, magnetic buttons, card spotlight, parallax mega title, count-up stats, floating tech chips, 3D tilt polaroid, scroll progress, pulsing play halo, rotating dashed ring CTA. |
+| **Marquee tickers** | Giant tilted red band + ghost outline band, infinite scroll. |
+| **Sections** | Work (filter tabs + numbered cards) → Numbers (big stat + ranked impact rows) → Craft (chips + 5-step process + red quote card) → Journey (expandable career timeline + certs) → Contact (circle CTA + list + tilted GTA card). |
+| **Micro-motion** | Scroll-spy nav with scramble hover, magnetic buttons, card image zoom, parallax mega title, intro stagger, reveal-on-scroll, scroll progress bar, live Jakarta clock. |
 
 All motion respects the **Motion On/Off** toggle (persisted in the browser) and `prefers-reduced-motion`.
 
 ## Editable by design
 
-1. Click **Edit Mode** in the bottom toolbar — every text on the page becomes editable in place.
-2. Changes autosave to `localStorage` per browser.
-3. **Export** downloads a `content.json`; replace `public/content.json` in the repo to publish for everyone.
-4. **Import / Reset** round-trips and restores defaults.
-5. Project cards can be added, removed and re-labeled from the gear icon on each card (Edit Mode).
+Toggle **Edit** in the header: every text on the page becomes `contenteditable`,
+changes autosave to `localStorage`, the gear icon on each project card opens a
+settings panel (title, hook, URL, category, image, delete), and **Export**
+downloads `content.json` so you can publish the new content to
+`public/content.json` on GitHub — no coding anywhere.
+
+See **PANDUAN-UPLOAD.md** (Bahasa Indonesia) for the full upload + editing walkthrough.
 
 ## Develop
 
 ```bash
-npm install
-npm run dev          # http://localhost:3000
+bun install
+bun run dev        # http://localhost:3000
+bun run lint
+PAGES_BUILD=1 PAGES_BASE_PATH=/portfolio bun x next build   # static export to out/
 ```
 
-## Deploy to GitHub Pages
-
-The workflow `.github/workflows/deploy-pages.yml` builds and publishes automatically on every push to `main`.
-
-Manual static export:
-
-```bash
-PAGES_BUILD=1 PAGES_BASE_PATH=/<repo-name> npx next build   # output in ./out
-```
-
-Full step-by-step upload instructions (in Indonesian): [`PANDUAN-UPLOAD.md`](./PANDUAN-UPLOAD.md).
-
-## Content model
-
-- `src/lib/site-content.ts` — TypeScript types + default content (source of truth in code)
-- `public/content.json` — published content, loaded at runtime, editable via Edit Mode → Export
-- `src/components/site/swarm.tsx` — the swarm cursor engine (self-written port of the POPOLAB resident cursors)
-- `src/components/site/` — header, hero, work grid, contact, footer, edit toolbar, effects
-
-## Credits
-
-Interaction language inspired by [POPOLAB](https://popolab-tw.github.io/) (cursor swarm concept rewritten from scratch). Hero artwork in the style of the GTA VI loading screens.
+Deploy: push the repo to GitHub, enable **Settings → Pages → Source: GitHub
+Actions**; `.github/workflows/deploy-pages.yml` builds and publishes on every push.

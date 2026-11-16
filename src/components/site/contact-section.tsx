@@ -5,6 +5,7 @@ import { Ed } from "./ed";
 import { Rv } from "./rv";
 import { Ico } from "./ico";
 import { Magnetic } from "./magnetic";
+import { LazyImg } from "./lazy-img";
 
 export function ContactSection() {
   const { content, editing } = useSite();
@@ -85,9 +86,17 @@ export function ContactSection() {
               <span className="label">
                 <b>GTA VI</b> / me &amp; Ria
               </span>
-              <span className="label">Status / <b>open to work</b></span>
+              <span className="label">
+                <b>Open to work</b>
+              </span>
             </div>
-            <img src={c.tiltImg} alt={c.tiltImgAlt} width={800} height={1067} loading="lazy" />
+            <LazyImg
+              src={c.tiltImg}
+              alt={c.tiltImgAlt}
+              width={800}
+              height={1067}
+              className="tc-img"
+            />
             <span className="tc-title font-display">
               <Ed p="contact.tiltTitle" />
             </span>

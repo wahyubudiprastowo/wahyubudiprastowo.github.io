@@ -1,22 +1,22 @@
 {
   "meta": {
-    "title": "Wahyu Budi Prastowo — Cloud Infrastructure Architect",
-    "description": "14+ years designing, migrating and securing enterprise infrastructure across Azure, AWS, GCP and hybrid clouds — now having fun putting AI to work on security, games, social media tooling and automation."
+    "title": "Wahyu Budi Prastowo — Cloud Infrastructure Architect & AI Tinkerer",
+    "description": "14+ years across Azure, AWS, GCP and hybrid cloud — DevOps, security, Microsoft 365 and automation by day; agentic AI, vibe coding and game projects by night. Everything open source."
   },
   "brand": "WAHYU",
   "hero": {
     "hello": "Hello, I'm",
     "name": "Wahyu Budi Prastowo",
     "dot": ".",
-    "role": "Cloud Infrastructure Architect\nMigration · Security · Automation · AI",
-    "desc": "14+ years designing, modernizing and securing enterprise infrastructure across Azure, AWS, GCP and hybrid environments. Currently having fun with everything AI — Agentic security operations, making games, social media tooling and automation that kills manual work.",
+    "role": "Cloud Infrastructure Architect\nDevOps · Security · Microsoft 365\nAgentic AI · Automation · Vibe Coding",
+    "desc": "14+ years designing, migrating and securing enterprise infrastructure across Azure, AWS, GCP and hybrid cloud. Off the clock: a certified AI tech enthusiast — agentic security operations, vibe-coded apps, game projects and automation that kills manual work.",
     "ctaPrimary": "See the work",
     "ctaSecondary": "GitHub",
     "ctaSecondaryHref": "https://github.com/wahyubudiprastowo",
     "tagline": "Every system,\nstarts with a plan.",
-    "photoUrl": "gta-hero.webp",
-    "photoCaption": "Wahyu & Ria — main characters",
-    "photoAlt": "GTA VI style illustration of Wahyu and Ria at sunset — Wahyu in an adidas jacket and mask, Ria in a niqab",
+    "photoUrl": "gta-cut.webp",
+    "photoCaption": "GTA VI edition — main character",
+    "photoAlt": "GTA VI style cutout of Wahyu — dark suit, black mask, round glasses and a red pocket square",
     "stripLeft": "Featured build: AgenticAiSOC",
     "stripLeftHref": "https://github.com/wahyubudiprastowo/AgenticAiSOC",
     "stripMid": "Scroll down",
@@ -44,58 +44,60 @@
   ],
   "ticker": {
     "words": [
-      "Cloud Security",
+      "DevOps",
+      "Security",
+      "Microsoft 365",
       "Automation",
-      "Azure",
       "Agentic AI",
+      "Vibe Coding",
       "Terraform",
-      "Kubernetes",
       "Zero Trust",
       "Game Making",
-      "Wazuh",
-      "Microsoft 365"
+      "Wazuh"
     ]
   },
   "work": {
     "num": "01",
     "label": "Selected work",
-    "titleEn": "Work that speaks.",
-    "titleSub": "Real systems, running in production",
-    "aside": "10 projects · all open source",
-    "note": "Click a card to open the repository on GitHub — every README covers usage and architecture.",
+    "titleEn": "Proof, not\npromises.",
+    "titleSub": "Real systems, shipped and open source",
+    "aside": "9 builds · 100% open source",
+    "note": "Every card opens the live repository on GitHub — READMEs cover architecture, usage and audit results.",
     "tabs": [
       {
         "id": "all",
         "label": "All"
       },
       {
-        "id": "security",
-        "label": "Security"
+        "id": "agentic",
+        "label": "Agentic AI"
       },
       {
-        "id": "infra",
-        "label": "Infra & Automation"
+        "id": "security",
+        "label": "Security & M365"
+      },
+      {
+        "id": "automation",
+        "label": "Automation & DevOps"
       },
       {
         "id": "apps",
         "label": "Apps & Games"
-      },
-      {
-        "id": "other",
-        "label": "Others"
       }
     ],
     "toolsLabel": "Built with",
-    "toolsLabelSub": "Tools I use every day",
+    "toolsLabelSub": "The daily-driver stack",
     "tools": [
-      "Azure",
       "Terraform",
+      "Ansible",
       "Kubernetes",
+      "Docker",
+      "Azure",
+      "Microsoft 365",
       "Python",
       "PowerShell",
       "Wazuh",
-      "Docker",
-      "Microsoft 365"
+      "GitHub Actions"
     ],
     "addBtn": "Add project"
   },
@@ -103,68 +105,79 @@
     {
       "id": "agenticaisoc",
       "title": "Agentic AI SOC",
-      "small": "Agentic AI · Security Operations",
-      "hook": "17 detection categories, Wazuh + Defender XDR + 6 threat-intel providers, Hermes skills and Qdrant memory — repo audit: 103 PASS / 0 FAIL.",
+      "small": "Agentic AI · Security operations",
+      "hook": "AI agents that triage alerts like a SOC team that never sleeps — 17 detection categories, 20 Hermes skills, Wazuh + Defender XDR + 6 threat-intel feeds. Repo audit: 103 PASS / 0 FAIL.",
       "url": "https://github.com/wahyubudiprastowo/AgenticAiSOC",
-      "cat": "security",
+      "cat": "agentic",
       "tag": "Flagship",
       "lang": "Python",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/AgenticAiSOC"
-    },
-    {
-      "id": "password-reminderad",
-      "title": "AD Password Governance",
-      "small": "Active Directory · Ops dashboard",
-      "hook": "Password-expiry monitoring, Microsoft 365 / Graph notifications and controlled helpdesk enforcement with full audit history.",
-      "url": "https://github.com/wahyubudiprastowo/Password-ReminderAD",
-      "cat": "security",
-      "tag": "Security",
-      "lang": "Python",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/Password-ReminderAD"
+      "img": ""
     },
     {
       "id": "wazuhaiunified",
       "title": "Wazuh AI Unified",
-      "small": "Unified SIEM + AI workflow",
-      "hook": "Brings AI reasoning into Wazuh-based security monitoring as a single, production-ready workflow.",
+      "small": "AI brain for an open-source SIEM",
+      "hook": "Raw alerts go in, plain-English verdicts with next steps come out — one production-ready workflow that puts AI reasoning inside Wazuh monitoring.",
       "url": "https://github.com/wahyubudiprastowo/WazuhAIUnified",
-      "cat": "security",
-      "tag": "Security",
+      "cat": "agentic",
+      "tag": "AI × SIEM",
       "lang": "Python",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/WazuhAIUnified"
+      "img": ""
+    },
+    {
+      "id": "password-reminderad",
+      "title": "AD Password Governance",
+      "small": "Active Directory · M365 / Graph",
+      "hook": "Kills the Monday-morning lockout: password expiry monitors itself, Microsoft 365 / Graph nudges users, and the helpdesk gets controlled enforcement with a full audit trail.",
+      "url": "https://github.com/wahyubudiprastowo/Password-ReminderAD",
+      "cat": "security",
+      "tag": "Identity",
+      "lang": "Python",
+      "img": ""
     },
     {
       "id": "microsoft365-backup",
       "title": "Microsoft 365 Backup",
       "small": "Self-hosted · Multi-tenant",
-      "hook": "SharePoint, OneDrive, Outlook & Teams backup platform that breaks free from high-cost enterprise subscriptions.",
+      "hook": "SharePoint, OneDrive, Outlook and Teams backed up on your own terms — freedom from eye-watering enterprise backup subscriptions.",
       "url": "https://github.com/wahyubudiprastowo/Microsoft365-Backup",
-      "cat": "infra",
-      "tag": "Data",
+      "cat": "security",
+      "tag": "Data safety",
       "lang": "Python",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/Microsoft365-Backup"
+      "img": ""
+    },
+    {
+      "id": "popo-portfolio",
+      "title": "This Portfolio",
+      "small": "Vibe-coded · Next.js + TypeScript",
+      "hook": "The site itself is the demo: vibe-coded end-to-end with AI pair programmers, shipped automatically by GitHub Actions — and every word on it is editable right in your browser.",
+      "url": "https://github.com/wahyubudiprastowo/wahyubudiprastowo.github.io",
+      "cat": "automation",
+      "tag": "Vibe-coded",
+      "lang": "TypeScript",
+      "img": ""
     },
     {
       "id": "rtfm-documentlabs",
       "title": "RTFM Document Labs",
       "small": "Document automation lab",
-      "hook": "Tooling lab for processing and managing documents programmatically — boring paperwork, automated away.",
+      "hook": "Paperwork is a bug: a Python lab that chews through repetitive document processing so humans can do the interesting part.",
       "url": "https://github.com/wahyubudiprastowo/RTFM-DocumentLabs",
-      "cat": "infra",
-      "tag": "Tooling",
+      "cat": "automation",
+      "tag": "Automation",
       "lang": "Python",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/RTFM-DocumentLabs"
+      "img": ""
     },
     {
       "id": "brightoria3d",
       "title": "Brightoria 3D",
       "small": "3D game-based learning",
-      "hook": "A 3D learning game world for kids aged 6–12 — self-paced tracks plus 1-on-1 tutoring. Yes, I make games too.",
+      "hook": "Yes, I make games too — a 3D learning world where kids aged 6–12 level up through self-paced tracks and 1-on-1 tutoring.",
       "url": "https://github.com/wahyubudiprastowo/brightoria3D",
       "cat": "apps",
-      "tag": "EdTech",
+      "tag": "Game making",
       "lang": "TypeScript",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/brightoria3D"
+      "img": ""
     },
     {
       "id": "quran-learning-adventure",
@@ -175,7 +188,7 @@
       "cat": "apps",
       "tag": "EdTech",
       "lang": "TypeScript",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/Qur-an-Learning-Adventure-Platform"
+      "img": ""
     },
     {
       "id": "habitcode",
@@ -186,29 +199,7 @@
       "cat": "apps",
       "tag": "Mobile",
       "lang": "TypeScript",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/habitcode"
-    },
-    {
-      "id": "lms-homeschooling-uqi",
-      "title": "LMS Homeschooling UQI",
-      "small": "Android learning app",
-      "hook": "An Android LMS built around the real teaching and learning needs of Homeschooling UQI.",
-      "url": "https://github.com/wahyubudiprastowo/LMS-Android-Apps-HomeschoolingUQI",
-      "cat": "apps",
-      "tag": "Android",
-      "lang": "Java",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/LMS-Android-Apps-HomeschoolingUQI"
-    },
-    {
-      "id": "whoami",
-      "title": "WhoAmI",
-      "small": "Profile & career docs",
-      "hook": "The self-introduction repo — certificates, career docs and the story behind this portfolio.",
-      "url": "https://github.com/wahyubudiprastowo/WhoAmI",
-      "cat": "other",
-      "tag": "Pinned",
-      "lang": "Python",
-      "img": "https://opengraph.githubassets.com/1/wahyubudiprastowo/WhoAmI"
+      "img": ""
     }
   ],
   "numbers": {
@@ -250,9 +241,9 @@
       },
       {
         "i": "05",
-        "rt": "Security incidents reduced",
-        "rtSub": "Suricata IDS/IPS and production hardening across the game-server fleet",
-        "rv": "60",
+        "rt": "Deployment lead time cut",
+        "rtSub": "Terraform + Ansible automation replacing repeatable manual provisioning",
+        "rv": "70",
         "rvSmall": "%"
       }
     ],
@@ -261,9 +252,9 @@
   "craft": {
     "num": "03",
     "label": "Behind the craft",
-    "titleEn": "More than\nprompts.",
-    "titleSub": "How I work with AI — and without it",
-    "lede": "I'm Wahyu. I spent 14 years keeping enterprise infrastructure alive — now I'm genuinely enjoying everything AI: security operations that reason, making games, social media tooling, and automating anything manual. The CV is the formal version; this is what I actually like doing.",
+    "titleEn": "Powered by\ncuriosity.",
+    "titleSub": "How I actually work — human plus AI",
+    "lede": "I'm Wahyu — 14 years keeping enterprise infrastructure alive, and a certified tech enthusiast who spends his nights deep in everything AI: agentic security operations, vibe-coded apps and games, social media tooling, and automating anything that smells manual. The CV is the formal version; this is the fun one.",
     "doLabel": "What I do",
     "doTitle": "Architecture and delivery, on me",
     "doChips": [
@@ -275,14 +266,14 @@
       "Identity & access"
     ],
     "aiLabel": "Currently into",
-    "aiTitle": "Everything AI, on the side",
+    "aiTitle": "The AI playground",
     "aiChips": [
       "Agentic AI SOC",
+      "Vibe coding",
+      "Security labs",
       "Game making",
       "Social media tools",
-      "Automation",
-      "DevOps pipelines",
-      "AI-assisted ops"
+      "Automation everywhere"
     ],
     "stepsLabel": "From request to runbook",
     "stepsTitle": "How I approach a build",
@@ -385,7 +376,7 @@
     "label": "Let's talk",
     "titleEn": "Let's build\nsomething.",
     "titleSub": "Open to relocation · GCC & EU",
-    "lede": "Cloud & security architecture, a migration program, or an AI idea that needs an infrastructure brain — happy to talk. Recruiter-friendly facts: 14+ years in, open to relocation across GCC & the European Union with employer-sponsored authorization.",
+    "lede": "Cloud & security architecture, a migration program, or an AI idea that needs an infrastructure brain — happy to talk. Recruiter-friendly facts: 14+ years in, Microsoft 365 & hybrid identity, agentic AI in production, open to relocation across GCC & the European Union.",
     "cta": "Say hi on LinkedIn",
     "ctaHref": "https://www.linkedin.com/in/wahyubudiprastowo",
     "items": [
